@@ -7,11 +7,11 @@ import torch
 torch.cuda.set_device(0)
 
 # data settings
-dataset_path = "dummy_dataset"
-class_name = "dummy_class"
+dataset_path = "dataste"
+class_name = "screw"
 modelname = "dummy_test"
 
-img_size = (448, 448)
+img_size = (1024, 1024)
 img_dims = [3] + list(img_size)
 
 # transformation settings
