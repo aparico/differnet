@@ -43,6 +43,6 @@ sub_epochs = 8
 
 # output settings
 verbose = True
-grad_map_viz = False
-hide_tqdm_bar = True
+grad_map_viz = True
+hide_tqdm_bar = False
 save_model = True
