@@ -9,7 +9,7 @@ torch.cuda.set_device(0)
 # data settings
 dataset_path = "dataset"
 class_name = "screw"
-modelname = "dummy_test"
+modelname = "screw_test"
 
 img_size = (1024, 1024)
 img_dims = [3] + list(img_size)
