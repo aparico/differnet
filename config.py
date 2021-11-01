@@ -7,7 +7,7 @@ import torch
 torch.cuda.set_device(0)
 
 # data settings
-dataset_path = "dataste"
+dataset_path = "dataset"
 class_name = "screw"
 modelname = "dummy_test"
 
