@@ -1,9 +1,11 @@
 # DifferNet
 
-This is the official repository to the WACV 2021 paper "[Same Same But DifferNet: Semi-Supervised Defect Detection with Normalizing Flows](
+This is forked from the official repository to the WACV 2021 paper "[Same Same But DifferNet: Semi-Supervised Defect Detection with Normalizing Flows](
 https://arxiv.org/abs/2008.12577)" by Marco Rudolph, Bastian Wandt and Bodo Rosenhahn.
 
-If the only reason you ended up here is because you made a typo on 'different' - what was our intention - here is a shortened summary: We introduce a method that is able to find anomalies like defects on image data without having some of them in the training set. Click [here](https://www.youtube.com/watch?v=lFxDtC34tk0) to watch our short presentation from WACV.
+Changes:
+* config.py
+* dataset (MVTec AD, Class = Screw)
 
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/same-same-but-differnet-semi-supervised/anomaly-detection-on-mvtec-ad)](https://paperswithcode.com/sota/anomaly-detection-on-mvtec-ad?p=same-same-but-differnet-semi-supervised)
@@ -29,9 +31,9 @@ Please report us if you have issues when using the code.
 
 ## Data
 
-The given dummy dataset shows how the implementation expects the construction of a dataset. Coincidentally, the [MVTec AD dataset](https://www.mvtec.com/company/research/datasets/mvtec-ad) is constructed in this way.
+The dataset is the Screw Class from the [MVTec AD dataset](https://www.mvtec.com/company/research/datasets/mvtec-ad).
 
-Set the variables _dataset_path_ and _class_name_ in _config.py_ to run experiments on a dataset of your choice. The expected structure of the data is as follows:
+Set the variables _dataset_path_ and _class_name_ in _config.py_ to run experiments on a dataset of your choice. The structure of the data is as follows:
 
 ``` 
 train data:
@@ -70,7 +72,7 @@ Some code of the [FrEIA framework](https://github.com/VLL-HD/FrEIA) was used for
 
 
 ## Citation
-Please cite our paper in your publications if it helps your research. Even if it does not, you are welcome to cite us.
+Please cite the original paper in your publications if it helps your research.
 
     @inproceedings { RudWan2021,
     author = {Marco Rudolph and Bastian Wandt and Bodo Rosenhahn},
