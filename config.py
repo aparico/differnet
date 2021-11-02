@@ -12,7 +12,7 @@ class_name = "screw"
 modelname = "screw_test"
 
 img_size = (1024, 1024)
-img_dims = [3] + list(img_size)
+img_dims = [1] + list(img_size)
 
 # transformation settings
 transf_rotations = True
