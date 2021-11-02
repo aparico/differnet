@@ -7,6 +7,8 @@ Changes:
 * config.py
 * dataset (MVTec AD, Class = Screw)
 
+[![PWC](https://user-images.githubusercontent.com/4096485/86174097-b56b9000-bb29-11ea-9240-c17f6bacfc34.png)](https://colab.research.google.com/drive/1rEC1wuIoffuZ9ijXq2-cyakQeGL_pGQD?usp=sharing)
+
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/same-same-but-differnet-semi-supervised/anomaly-detection-on-mvtec-ad)](https://paperswithcode.com/sota/anomaly-detection-on-mvtec-ad?p=same-same-but-differnet-semi-supervised)
 
