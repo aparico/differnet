@@ -1,37 +1,18 @@
 # DifferNet
 
-This is forked from the [official repository](https://github.com/marco-rudolph/differnet) to the WACV 2021 paper "[Same Same But DifferNet: Semi-Supervised Defect Detection with Normalizing Flows](
-https://arxiv.org/abs/2008.12577)" by Marco Rudolph, Bastian Wandt and Bodo Rosenhahn.
+This is forked from the [official repository](https://github.com/marco-rudolph/differnet) to the WACV 2021 paper "[Same Same But DifferNet: Semi-Supervised Defect Detection with Normalizing Flows](https://arxiv.org/abs/2008.12577)" by Marco Rudolph, Bastian Wandt and Bodo Rosenhahn.
 
 Changes:
 * config.py
 * dataset (MVTec AD, Class = Screw)
+* training details are saved to a log file and can be converted to csv
 
 [![PWC](https://user-images.githubusercontent.com/4096485/86174097-b56b9000-bb29-11ea-9240-c17f6bacfc34.png)](https://colab.research.google.com/drive/1rEC1wuIoffuZ9ijXq2-cyakQeGL_pGQD?usp=sharing)
 
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/same-same-but-differnet-semi-supervised/anomaly-detection-on-mvtec-ad)](https://paperswithcode.com/sota/anomaly-detection-on-mvtec-ad?p=same-same-but-differnet-semi-supervised)
 
-## Getting Started
-
-You will need [Python 3.6](https://www.python.org/downloads) and the packages specified in _requirements.txt_.
-We recommend setting up a [virtual environment with pip](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
-and installing the packages there.
-
-Install packages with:
-
-```
-$ pip install -r requirements.txt
-```
-
-## Configure and Run
-
-All configurations concerning data, model, training, visualization etc. can be made in _config.py_. The default configuration will run a training with paper-given parameters on the provided dummy dataset. This dataset contains images of 4 squares as normal examples and 4 circles as anomaly.
-
-To start the training, just run _main.py_! If training on the dummy data does not lead to an AUROC of 1.0, something seems to be wrong.
-Please report us if you have issues when using the code.
-
-## Data
+## Dataset Structure
 
 The dataset is the Screw Class from the [MVTec AD dataset](https://www.mvtec.com/company/research/datasets/mvtec-ad).
 
@@ -68,9 +49,36 @@ test data:
         [...]
 ``` 
 
+## Getting Started
+
+You will need [Python 3.6](https://www.python.org/downloads) and the packages specified in _requirements.txt_.
+We recommend setting up a [virtual environment with pip](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+and installing the packages there.
+
+Install packages with:
+
+```
+$ pip install -r requirements.txt
+```
+
+## Configure and Run
+
+All configurations concerning data, model, training, visualization etc. can be made in _config.py_. The default configuration will run a training with paper-given parameters on the screw dataset. 
+
+To start the training, just run _main.py_! But I recommend the command below:
+
+```
+$ python main.py | tee $(date +%Y%m%d).log
+```
+
+There's a script _log_to_csv.py_ to convert the log file into a csv file with the training loss, test loss, and AUROC per epoch. 
+
+If you have issues when using the code, please report to the main [repo](https://github.com/marco-rudolph/differnet).
+
+
 ## Credits
 
-Some code of the [FrEIA framework](https://github.com/VLL-HD/FrEIA) was used for the implementation of Normalizing Flows. Follow [their tutorial](https://github.com/VLL-HD/FrEIA) if you need more documentation about it.
+Most of the code is from the  [official repository](https://github.com/marco-rudolph/differnet) and some of the implementation of Normalizing Flows are from the [FrEIA framework](https://github.com/VLL-HD/FrEIA) . Follow [their tutorial](https://github.com/VLL-HD/FrEIA) if you need more documentation about it.
 
 
 ## Citation
