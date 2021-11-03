@@ -12,6 +12,14 @@ Changes:
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/same-same-but-differnet-semi-supervised/anomaly-detection-on-mvtec-ad)](https://paperswithcode.com/sota/anomaly-detection-on-mvtec-ad?p=same-same-but-differnet-semi-supervised)
 
+
+## Results
+
+I have tested the effect of different number of input images (hyperparameters are same with the original paper) on AUROC. Here are the results:
+
+![auroc_vs_inputimages](https://user-images.githubusercontent.com/47623790/140013160-b1505af0-8a0d-485f-abc0-dccdb15fa1ba.png)
+
+
 ## Dataset Structure
 
 The dataset is the Screw Class from the [MVTec AD dataset](https://www.mvtec.com/company/research/datasets/mvtec-ad).
